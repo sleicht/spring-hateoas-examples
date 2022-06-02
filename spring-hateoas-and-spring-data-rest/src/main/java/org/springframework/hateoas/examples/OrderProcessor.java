@@ -97,6 +97,6 @@ public class OrderProcessor implements RepresentationModelProcessor<EntityModel<
 			e.printStackTrace();
 		}
 
-		return new Link(newUri.toString(), link.getRel());
+		return Link.of(newUri.toString(), link.getRel());
 	}
 }

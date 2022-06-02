@@ -1,0 +1,7 @@
+### employees json
+GET http://localhost:8080/employees
+accept: application/json
+
+### employees hal
+GET http://localhost:8080/employees
+accept: application/hal+json

@@ -18,13 +18,20 @@ package org.springframework.hateoas.examples;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration;
 import org.springframework.context.annotation.Bean;
+import org.springframework.hateoas.config.EnableHypermediaSupport;
 import org.springframework.hateoas.server.core.EvoInflectorLinkRelationProvider;
+import org.springframework.hateoas.support.WebStack;
 
 /**
  * @author Greg Turnquist
  */
+// For tests default version (1.5.0) of spring-hateoas
 @SpringBootApplication
+// For tests with downgraded version (1.2.11) of spring-hateoas
+//@SpringBootApplication(exclude = HypermediaAutoConfiguration.class)
+//@EnableHypermediaSupport(type = EnableHypermediaSupport.HypermediaType.HAL, stacks = WebStack.WEBMVC)
 public class SpringHateoasBasicsApplication {
 
 	public static void main(String... args) {
